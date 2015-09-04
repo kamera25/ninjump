@@ -42,6 +42,15 @@ public class CameraFadeControl : MonoBehaviour
         Color color = blackImg.color;
         color.a = alpha;
         blackImg.color = color;
+
+		if (alpha <= 0F) 
+		{
+			blackImg.gameObject.SetActive (false);
+		} 
+		else 
+		{
+			blackImg.gameObject.SetActive(true);
+		}
     }
 
     public void fadeIn ()
