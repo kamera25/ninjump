@@ -1,9 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+public enum Stage
+{
+	none,
+	sky,
+	city,
+	space
+}
+
 public class TitleMenuController : MonoBehaviour 
 {
+	[SerializeField]
 	GameObject helpCanvas = null;
+	Stage stage = Stage.none;
 
 	/// <summary>
 	/// ステージ選択画面を呼び出す.
@@ -16,26 +26,25 @@ public class TitleMenuController : MonoBehaviour
 
 	public void CallSkyScene()
 	{
-		Application.LoadLevel ("sky");
+		stage = Stage.sky;
+		helpCanvas.SetActive (true);
 	}
 		
 	public void CallCityScene()
 	{
-		Application.LoadLevel ("city");
+		stage = Stage.city;
+		helpCanvas.SetActive (true);
 	}
 	
 	public void CallSpaceScene()
 	{
-		Application.LoadLevel ("space");
+		stage = Stage.space;
+		helpCanvas.SetActive (true);
 	}
 
-	public void CallHelpCanvas()
+	public void GoToStage()
 	{
-		 helpCanvas = GameObject.Instantiate<GameObject>( Resources.Load<GameObject>("Prefabs/Menu/HelpCanvas"));
+		Application.LoadLevel ( stage.ToString());
 	}
 
-	public void CloseHelpCanvas()
-	{
-		Destroy (helpCanvas);
-	}
 }
