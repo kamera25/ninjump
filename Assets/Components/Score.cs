@@ -1,12 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
-public class Score : MonoBehaviour {
-	// スコアを表示するGUIText
-	public GUIText scoreGUIText;
+public class Score : MonoBehaviour 
+{
+
+	// スコアを表示するText
+	[SerializeField]
+	Text scoreGUIText;
 	
-	// ハイスコアを表示するGUIText
-	public GUIText highScoreGUIText;
+	// ハイスコアを表示するText
+	[SerializeField]
+	Text highScoreGUIText;
 	
 	// スコア
 	private int score;
