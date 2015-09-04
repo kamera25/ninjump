@@ -171,7 +171,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1001 &230347944
 Prefab:
   m_ObjectHideFlags: 0
@@ -256,7 +256,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57f96556be0d24872bffdf0380a24bcc, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &568970304
+--- !u!1001 &329544401
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -293,19 +293,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 452290, guid: a21682f8e96c54e91a879f032ad52a67, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 21212154, guid: a21682f8e96c54e91a879f032ad52a67, type: 2}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 150009434319b410e9e5c6372fe58072,
         type: 3}
-    - target: {fileID: 21274876, guid: a21682f8e96c54e91a879f032ad52a67, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: f6db02ab6a11da9458fb76659632f339,
         type: 3}
-    - target: {fileID: 21229040, guid: a21682f8e96c54e91a879f032ad52a67, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 46660250cdbbf3742bce10ef92f1ab1a,
@@ -330,6 +330,14 @@ Prefab:
     - target: {fileID: 452290, guid: a21682f8e96c54e91a879f032ad52a67, type: 2}
       propertyPath: m_LocalScale.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 118182, guid: a21682f8e96c54e91a879f032ad52a67, type: 2}
+      propertyPath: m_Name
+      value: Background1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 118182, guid: a21682f8e96c54e91a879f032ad52a67, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a21682f8e96c54e91a879f032ad52a67, type: 2}
