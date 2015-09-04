@@ -39,7 +39,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38897e8f4d9674d9381143267f14f76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 141904, guid: e7b3b00a55d8a45ed83fc9813ce9f784, type: 2}
+  enemys: []
   item: {fileID: 193426, guid: d7325719169124eeab404f686f59c8d1, type: 2}
   ground: {fileID: 156944, guid: c0d77defc885d446d9348b295b7069f8, type: 2}
   v_enemy: {x: 14, y: 3.4000001}

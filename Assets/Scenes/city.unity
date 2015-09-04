@@ -299,6 +299,10 @@ Prefab:
       propertyPath: effect_player
       value: 
       objectReference: {fileID: 137338, guid: 0851a2947fff092439852d4c88d8a132, type: 2}
+    - target: {fileID: 11436648, guid: 41a819d85c7b648e089afcf306044055, type: 2}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 101084, guid: 4b354e4e93d020541b59771945b9ffab, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 41a819d85c7b648e089afcf306044055, type: 2}
   m_IsPrefabParent: 0
@@ -385,7 +389,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 462754, guid: 183d2a66c1b2f407c89c41f6e6aa5e87, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11496972, guid: 183d2a66c1b2f407c89c41f6e6aa5e87, type: 2}
       propertyPath: enemys.Array.data[0]
