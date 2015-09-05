@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
 
 	public GameObject effect_player;
 
+
 	[SerializeField]
 	private GameObject bullet;
 	private GameObject trriger;
@@ -32,7 +33,6 @@ public class Player : MonoBehaviour
 		animator = GetComponent<Animator> ();
 		min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
 		max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
-
 	}
 	
 	void Update ()

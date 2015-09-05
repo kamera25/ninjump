@@ -441,7 +441,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11496972, guid: 183d2a66c1b2f407c89c41f6e6aa5e87, type: 2}
       propertyPath: seconds
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11496972, guid: 183d2a66c1b2f407c89c41f6e6aa5e87, type: 2}
       propertyPath: INTERVAL
@@ -450,6 +450,10 @@ Prefab:
     - target: {fileID: 11496972, guid: 183d2a66c1b2f407c89c41f6e6aa5e87, type: 2}
       propertyPath: timer
       value: .699999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 111438, guid: 183d2a66c1b2f407c89c41f6e6aa5e87, type: 2}
+      propertyPath: m_TagString
+      value: GameController
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 183d2a66c1b2f407c89c41f6e6aa5e87, type: 2}
@@ -695,6 +699,18 @@ Prefab:
       propertyPath: point
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 109126, guid: 021c7786e8fc01a439f5d174506ee05f, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 21298928, guid: 021c7786e8fc01a439f5d174506ee05f, type: 2}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11491380, guid: 021c7786e8fc01a439f5d174506ee05f, type: 2}
+      propertyPath: effect_enemy
+      value: 
+      objectReference: {fileID: 169924, guid: 658621affddf3204c811237860896460, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 021c7786e8fc01a439f5d174506ee05f, type: 2}
   m_IsPrefabParent: 0

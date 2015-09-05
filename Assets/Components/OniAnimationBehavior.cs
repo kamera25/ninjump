@@ -6,7 +6,7 @@ public class OniAnimationBehavior : StateMachineBehaviour
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-		GameObject.FindWithTag("Oni").SendMessage ("StopDeadMotion");
+		GameObject.FindWithTag("GameController").SendMessage ("StopDeadMotion");
 	}
 	
 }

@@ -327,6 +327,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 101816, guid: 41a819d85c7b648e089afcf306044055, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 41a819d85c7b648e089afcf306044055, type: 2}
   m_IsPrefabParent: 0
@@ -499,6 +503,10 @@ Prefab:
     - target: {fileID: 11496330, guid: 1d3c9d2de47684315be0fd0ad4a456f4, type: 2}
       propertyPath: INTERVAL
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 128204, guid: 1d3c9d2de47684315be0fd0ad4a456f4, type: 2}
+      propertyPath: m_TagString
+      value: GameController
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d3c9d2de47684315be0fd0ad4a456f4, type: 2}

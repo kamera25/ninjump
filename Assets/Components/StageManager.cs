@@ -17,7 +17,9 @@ public class StageManager : MonoBehaviour {
 
 	public float seconds = 3f;
 	private int count = 0;
-	
+
+	private GameObject player;
+
 	public float INTERVAL = 3.0f;
 	public float timer;
 
@@ -29,18 +31,16 @@ public class StageManager : MonoBehaviour {
 		while (true) {
 			
 			int rand = Random.Range(1, 4);
-			float y = Random.Range (0f, 4f);
+			float randY = Random.Range (-1.5f, 1.5f);
 			switch(rand){
 			case 1:
 				int ene_rand = Random.Range(1, 5);
-				transform.position = v_enemy;
+				transform.position = v_enemy + new Vector2( 0F, randY);
 				Instantiate (enemys[ene_rand], transform.position, transform.rotation);
 				break;
 			case 2:
-				transform.position = new Vector2(MoveX, y);
+				transform.position = new Vector2(MoveX, randY);
 				Instantiate (item, transform.position, transform.rotation);
-				break;
-			default:
 				break;
 			}
 			
@@ -50,6 +50,11 @@ public class StageManager : MonoBehaviour {
 			yield return new WaitForSeconds (seconds);
 			
 		}
+	}
+
+	private void Awake()
+	{
+		player = GameObject.FindWithTag ("Player");
 	}
 
 	private void Update()
@@ -71,7 +76,11 @@ public class StageManager : MonoBehaviour {
 				Application.LoadLevel("title");
 			}
 
-			Time.timeScale -= Time.deltaTime;
+			// プレイヤーが落ちてたら.
+			if( player == null)
+			{
+				Time.timeScale -= Time.deltaTime;
+			}
 		}
 	}
 
@@ -89,5 +98,11 @@ public class StageManager : MonoBehaviour {
 		gameOver.GetComponent<Text> ().enabled = true;
 		isGameOver = true;
 	}
+
+	public void StopDeadMotion()
+	{
+		GameObject.Instantiate<GameObject> (Resources.Load<GameObject>("Prefabs/UI/GameClearCanvas"));
+	}
+
 		
 }

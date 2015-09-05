@@ -60,12 +60,7 @@ public class Oni : Enemy
 			faceTime = nowTime + 3F;
 		}
 	}
-
-	public void StopDeadMotion()
-	{
-		GameObject.Instantiate<GameObject> (Resources.Load<GameObject>("Prefabs/UI/GameClearCanvas"));
-	}
-
+	
 	private bool IsAppearOni()
 	{
 		return appearTime < nowTime;
