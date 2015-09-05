@@ -8,18 +8,18 @@ public class StageManager : MonoBehaviour {
 	
 	public GameObject[] enemys;
 	public GameObject item;
-	public GameObject ground;
+	public GameObject[] ground;
 
 	public Vector2 v_enemy;
 	public Vector2 v_item;
 	public Vector2 v_ground;
 
 
-	public float seconds = 5f;
+	public float seconds = 3f;
 	private int count = 0;
 	
-	public const float INTERVAL = 3.0f;
-	public float timer = INTERVAL;
+	public float INTERVAL = 3.0f;
+	public float timer;
 
 	private bool isGameOver;
 
@@ -51,18 +51,17 @@ public class StageManager : MonoBehaviour {
 			
 		}
 	}
-	
+
 	private void Update()
 	{
 		timer -= Time.deltaTime;
 		if (timer <= 0)
 		{
 			//transform.position = v_ground;
-			transform.position = new Vector2(MoveX, 18f);
-			Instantiate (ground, transform.position, transform.rotation);
-			if(seconds > 1.0f){
-				//seconds = seconds - 0.5f;
-			}
+			int rand = Random.Range( 0, ground.Length);
+			transform.position = new Vector2(MoveX, 18f) + v_ground;
+			Instantiate (ground[rand], transform.position, transform.rotation);
+
 			timer = INTERVAL;
 		}
 

@@ -1,13 +1,15 @@
 using UnityEngine;
 using System.Collections;
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour 
+{
 	public int hp = 3;
+	float tapTime = 0F;
 
 	Rigidbody2D rb;
 	public int moveSpeed = 2;
 	public LayerMask groundLayer; //地面のレイヤー
-	float jumpForce = 500; //ジャンプ力
+	float jumpForce = 10F; //ジャンプ力
 	bool isGrounded; //着地しているかの判定
 
 	public float distance;
@@ -44,13 +46,28 @@ public class Player : MonoBehaviour {
 
 		if (Input.GetMouseButtonDown(0)) {
 			HitFirst();
+
 		}
 
-		if(Input.GetMouseButton(0)){
-			HitLast();
+		if (Input.GetMouseButton (0)) {
+			HitLast ();
+
+			// もしタップし続けてたら,速度を上げる.
+			if (0.5F < tapTime) {
+				Time.timeScale = Mathf.Clamp (Time.timeScale + Time.deltaTime, 1F, 3F);
+			}
+		} else 
+		{
+			if( 1F < Time.timeScale)
+			{
+				Time.timeScale = Mathf.Clamp (Time.timeScale - Time.deltaTime, 1F, 3F);
+			}
 		}
+
+
 		
 		if(Input.GetMouseButtonUp(0)){
+
 			// 距離
 			distance = Vector2.Distance(hitPoint2, hitPoint1);
 			Debug.Log(hitPoint1);
@@ -65,6 +82,10 @@ public class Player : MonoBehaviour {
 				// Empty
 				Jump ();
 			}
+
+			//タップ時間を初期化
+			Debug.Log(tapTime);
+			tapTime = 0F;
 		}
 
 		animator.SetBool("IsGround", isGrounded);
@@ -79,6 +100,8 @@ public class Player : MonoBehaviour {
 	void HitLast(){
 		Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		hitPoint2= worldPoint;
+
+		tapTime += Time.deltaTime;
 	}
 
 	void OnCollisionEnter2D (Collision2D col){
@@ -96,7 +119,8 @@ public class Player : MonoBehaviour {
 	void Jump (){
 		//上方向へ力を加える
 		Debug.Log("Jump");
-		rb.AddForce (Vector2.up * jumpForce);
+
+		rb.AddForce (Vector2.up * jumpForce * Mathf.Clamp( tapTime * 13F, 0.7F, 1.3F), ForceMode2D.Impulse);
 		isGrounded = false;
 		animator.SetTrigger("IsJump");
 	}

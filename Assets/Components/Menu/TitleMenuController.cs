@@ -15,6 +15,11 @@ public class TitleMenuController : MonoBehaviour
 	GameObject helpCanvas = null;
 	Stage stage = Stage.none;
 
+	void Start()
+	{
+		Time.timeScale = 1F;
+	}
+
 	/// <summary>
 	/// ステージ選択画面を呼び出す.
 	/// </summary>
