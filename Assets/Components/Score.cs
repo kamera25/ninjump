@@ -20,7 +20,7 @@ public class Score : MonoBehaviour
 	private int highScore;
 	
 	// PlayerPrefsで保存するためのキー
-	private string highScoreKey = "highScore";
+	private string highScoreKey;
 	
 	void Start ()
 	{
@@ -46,6 +46,7 @@ public class Score : MonoBehaviour
 		score = 0;
 		
 		// ハイスコアを取得する。保存されてなければ0を取得する。
+		highScoreKey = "HighScore_" + Application.loadedLevelName;
 		highScore = PlayerPrefs.GetInt (highScoreKey, 0);
 	}
 	
