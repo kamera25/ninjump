@@ -217,7 +217,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11491380, guid: 55d83121e64fd224bad9565cac66eb88, type: 2}
       propertyPath: point
-      value: 60
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 11491380, guid: 55d83121e64fd224bad9565cac66eb88, type: 2}
       propertyPath: effect_enemy

@@ -20,19 +20,19 @@ public class ClearSceneController : MonoBehaviour
 	{
 		Time.timeScale = 0F; // 処理と時間を止める.
 
-		scoreObj = GameObject.Find("ScoreGUI");
+		Score score = GameObject.Find("ScoreGUI").GetComponent<Score>();
 
 		// 大量の情報を取得
-		saveKey = "score" + Application.loadedLevelName;
+		saveKey = score.highScoreKey;
 		oldScore = PlayerPrefs.GetInt ( saveKey);
-		nowScore = scoreObj.GetComponent<Score> ().GetPoint ();
+		nowScore = score.GetPoint ();
 
 		// スコアの記入
 		scoreText.text = "Score : " + nowScore;
 		if (oldScore < nowScore) 
 		{
 			highScoreText.SetActive(true);
-			PlayerPrefs.SetInt (saveKey, nowScore); // スコアの更新.
+			score.Save(); // スコアの更新.
 		}
 	}
 

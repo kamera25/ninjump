@@ -253,18 +253,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11491380, guid: bdc69b728a73ed648b25f00719f23e9f, type: 2}
-      propertyPath: appearTime
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 11491380, guid: bdc69b728a73ed648b25f00719f23e9f, type: 2}
-      propertyPath: effect_enemy
-      value: 
-      objectReference: {fileID: 169924, guid: 658621affddf3204c811237860896460, type: 2}
-    - target: {fileID: 109126, guid: bdc69b728a73ed648b25f00719f23e9f, type: 2}
-      propertyPath: m_TagString
-      value: Oni
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bdc69b728a73ed648b25f00719f23e9f, type: 2}
   m_IsPrefabParent: 0

@@ -20,7 +20,7 @@ public class Score : MonoBehaviour
 	private int highScore;
 	
 	// PlayerPrefsで保存するためのキー
-	private string highScoreKey;
+	public string highScoreKey;
 	
 	void Start ()
 	{

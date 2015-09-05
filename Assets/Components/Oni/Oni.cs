@@ -12,15 +12,7 @@ public class Oni : Enemy
 	public float nowTime = 0F;
 
 	public float faceTime = 0F;
-
-
-
-
-	void Awake()
-	{
-		//spriteR = this.GetComponent<SpriteRenderer> ();
-	}
-
+	
 	void Start()
 	{
 		anim = this.GetComponent<Animator> ();

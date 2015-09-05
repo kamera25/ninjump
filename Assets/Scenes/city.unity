@@ -209,7 +209,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400176, guid: a97dad61445634d3caac5526c7bf7eef, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a97dad61445634d3caac5526c7bf7eef, type: 2}
@@ -351,7 +351,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 452290, guid: a21682f8e96c54e91a879f032ad52a67, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a21682f8e96c54e91a879f032ad52a67, type: 2}
@@ -441,7 +441,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11496972, guid: 183d2a66c1b2f407c89c41f6e6aa5e87, type: 2}
       propertyPath: seconds
-      value: 3
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 11496972, guid: 183d2a66c1b2f407c89c41f6e6aa5e87, type: 2}
       propertyPath: INTERVAL
@@ -495,7 +495,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 474852, guid: c0d77defc885d446d9348b295b7069f8, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 156944, guid: c0d77defc885d446d9348b295b7069f8, type: 2}
       propertyPath: m_Name
@@ -557,7 +557,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 402712, guid: d8374620c6b25480b9af2e6cf5b230fc, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11432244, guid: d8374620c6b25480b9af2e6cf5b230fc, type: 2}
       propertyPath: player
@@ -603,7 +603,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22434032, guid: 159470c8486bc4f7abcbe99ce6258c5a, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 22434032, guid: 159470c8486bc4f7abcbe99ce6258c5a, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -689,7 +689,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 486252, guid: 021c7786e8fc01a439f5d174506ee05f, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11491380, guid: 021c7786e8fc01a439f5d174506ee05f, type: 2}
       propertyPath: appearTime
@@ -697,7 +697,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11491380, guid: 021c7786e8fc01a439f5d174506ee05f, type: 2}
       propertyPath: point
-      value: 40
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 109126, guid: 021c7786e8fc01a439f5d174506ee05f, type: 2}
       propertyPath: m_Layer

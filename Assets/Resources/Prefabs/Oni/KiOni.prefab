@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11491380}
   m_Layer: 9
   m_Name: KiOni
-  m_TagString: Untagged
+  m_TagString: Oni
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 109126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.01999998, y: .129999995, z: 0}
+  m_LocalPosition: {x: 13.1000004, y: -1.10000002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -139,10 +139,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 10
   speed: -1
-  point: 100
-  effect_enemy: {fileID: 0}
-  appearTime: 1
-  faceChangetime: 0
+  point: 150
+  effect_enemy: {fileID: 169924, guid: 658621affddf3204c811237860896460, type: 2}
+  appearTime: 20
   nowTime: 0
   faceTime: 0
 --- !u!212 &21298928
