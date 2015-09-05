@@ -84,7 +84,6 @@ public class Player : MonoBehaviour
 			}
 
 			//タップ時間を初期化
-			Debug.Log(tapTime);
 			tapTime = 0F;
 		}
 

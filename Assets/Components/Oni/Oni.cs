@@ -8,8 +8,6 @@ public class Oni : Enemy
 
 	[SerializeField]
 	float appearTime = 10F; // 鬼の出現時間.
-	[SerializeField]
-	float faceChangetime = 0F;
 
 	public float nowTime = 0F;
 
