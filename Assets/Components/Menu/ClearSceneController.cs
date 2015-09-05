@@ -40,6 +40,18 @@ public class ClearSceneController : MonoBehaviour
 	{
 		Time.timeScale = 1F; // 処理時間を戻す.
 
-		Application.LoadLevel ("title");
+		Debug.Log (Application.loadedLevel);
+
+		if (Application.loadedLevel == 3) 
+		{
+			Application.LoadLevel ("ending");
+		} 
+		else {
+			Application.LoadLevel ("title");
+		}
+
+
+
+
 	}
 }

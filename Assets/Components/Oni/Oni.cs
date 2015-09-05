@@ -4,10 +4,24 @@ using System.Collections;
 public class Oni : Enemy 
 {
 	Animator anim;
+	//public SpriteRenderer spriteR;
 
 	[SerializeField]
 	float appearTime = 10F; // 鬼の出現時間.
-	float nowTime = 0F;
+	[SerializeField]
+	float faceChangetime = 0F;
+
+	public float nowTime = 0F;
+
+	public float faceTime = 0F;
+
+
+
+
+	void Awake()
+	{
+		//spriteR = this.GetComponent<SpriteRenderer> ();
+	}
 
 	void Start()
 	{
@@ -33,21 +47,23 @@ public class Oni : Enemy
 			return;
 		}
 
-		//base.OnTriggerEnter2D (col);
+		base.OnTriggerEnter2D (col);
 
 		if (hp < 0F) 
 		{
 			anim.SetTrigger ("IsDead");
+			faceTime = nowTime + 10F;
 		} 
-		else {
+		else 
+		{
 			anim.SetTrigger("HitDamage");
+			faceTime = nowTime + 3F;
 		}
 	}
 
-
 	public void StopDeadMotion()
 	{
-		GameObject.Instantiate<GameObject> (Resources.Load<GameObject>("Prefabs/SceneClear/GameClearCanvas"));
+		GameObject.Instantiate<GameObject> (Resources.Load<GameObject>("Prefabs/UI/GameClearCanvas"));
 	}
 
 	private bool IsAppearOni()

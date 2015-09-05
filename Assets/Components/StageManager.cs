@@ -70,6 +70,8 @@ public class StageManager : MonoBehaviour {
 			if (Input.GetMouseButtonDown (0)) {
 				Application.LoadLevel("title");
 			}
+
+			Time.timeScale -= Time.deltaTime;
 		}
 	}
 

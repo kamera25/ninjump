@@ -120,7 +120,7 @@ public class Player : MonoBehaviour
 		//上方向へ力を加える
 		Debug.Log("Jump");
 
-		rb.AddForce (Vector2.up * jumpForce * Mathf.Clamp( tapTime * 13F, 0.7F, 1.3F), ForceMode2D.Impulse);
+		rb.AddForce (Vector2.up * jumpForce * Mathf.Clamp( tapTime * 13F, 0.65F, 1F), ForceMode2D.Impulse);
 		isGrounded = false;
 		animator.SetTrigger("IsJump");
 	}
