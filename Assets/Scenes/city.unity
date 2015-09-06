@@ -711,6 +711,10 @@ Prefab:
       propertyPath: effect_enemy
       value: 
       objectReference: {fileID: 169924, guid: 658621affddf3204c811237860896460, type: 2}
+    - target: {fileID: 9561960, guid: 021c7786e8fc01a439f5d174506ee05f, type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8dda9b4b1fad60640a7131b3219f7824, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 021c7786e8fc01a439f5d174506ee05f, type: 2}
   m_IsPrefabParent: 0
