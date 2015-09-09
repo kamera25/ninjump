@@ -25,6 +25,9 @@ public class StageManager : MonoBehaviour {
 
 	private bool isGameOver;
 
+	private AudioSource audioSource;
+	private AudioClip gameOverSE;
+
 	// Startメソッドをコルーチンとして呼び出す
 	IEnumerator Start ()
 	{
@@ -55,6 +58,8 @@ public class StageManager : MonoBehaviour {
 	private void Awake()
 	{
 		player = GameObject.FindWithTag ("Player");
+		audioSource = this.GetComponent<AudioSource> ();
+		gameOverSE = Resources.Load<AudioClip> ("Sounds/tm2_death000");
 	}
 
 	private void Update()
@@ -97,6 +102,7 @@ public class StageManager : MonoBehaviour {
 
 		gameOver.GetComponent<Text> ().enabled = true;
 		isGameOver = true;
+		audioSource.PlayOneShot (gameOverSE);
 	}
 
 	public void StopDeadMotion()

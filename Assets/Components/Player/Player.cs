@@ -27,12 +27,21 @@ public class Player : MonoBehaviour
 	Vector2 min;
 	Vector2 max;
 
+	AudioSource audioSource;
+	AudioClip shurikenSE;
+	AudioClip jumpSE;
+
 	void Start (){
 		rb = GetComponent<Rigidbody2D>();
 
 		animator = GetComponent<Animator> ();
 		min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
 		max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
+
+		//音声の取得
+		audioSource = this.GetComponent<AudioSource> ();
+		shurikenSE = Resources.Load <AudioClip>("Sounds/tm2_swing000");
+		jumpSE = Resources.Load<AudioClip> ("Sounds/tm2_hit000");
 	}
 	
 	void Update ()
@@ -76,6 +85,7 @@ public class Player : MonoBehaviour
 			// 大きさが1以上で、ベクトルがy軸に対して30度未満のものをフリック入力として受け取る。
 			if(distance > 1f){
 				Debug.Log("Flick");
+				audioSource.PlayOneShot( shurikenSE);
 				animator.SetTrigger("Attack");
 				Instantiate (bullet, transform.position, transform.rotation);
 			}else if(isGrounded && distance <= 1f){
@@ -122,6 +132,7 @@ public class Player : MonoBehaviour
 		rb.AddForce (Vector2.up * jumpForce * Mathf.Clamp( tapTime * 9F, 0.65F, 1F), ForceMode2D.Impulse);
 		isGrounded = false;
 		animator.SetTrigger("IsJump");
+		audioSource.PlayOneShot (jumpSE);
 	}
 
 	public void Damage(int dmg){

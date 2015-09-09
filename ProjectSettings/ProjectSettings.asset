@@ -84,14 +84,14 @@ PlayerSettings:
     16:9: 1
     Others: 0
   bundleIdentifier: jp.fukushima.gamejam.okayama.team3
-  bundleVersion: 1.0
+  bundleVersion: 1.1
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
   productGUID: d0950468e2f1c491eaf86f368c6e7b23
-  AndroidBundleVersionCode: 1
+  AndroidBundleVersionCode: 2
   AndroidMinSdkVersion: 15
   AndroidPreferredInstallLocation: 1
   aotOptions: 
