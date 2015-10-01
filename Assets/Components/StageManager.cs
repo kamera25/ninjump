@@ -103,6 +103,8 @@ public class StageManager : MonoBehaviour {
 		gameOver.GetComponent<Text> ().enabled = true;
 		isGameOver = true;
 		audioSource.PlayOneShot (gameOverSE);
+
+		GameObject.Find ("Sound").SendMessage ("EnableFadeOut");
 	}
 
 	public void StopDeadMotion()
